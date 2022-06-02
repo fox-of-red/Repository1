@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- ハンバーガーメニュー -->
   <section id="overlay"></section>
   <header id="header">
-    <h1>Hamburger</h1>
+    <h2>ハンバーガーメニュー</h2>
     <div class="hum">
       <span class="n1"></span>
       <span class="n2"></span>
       <span class="n3"></span>
     </div>
   </header>
+  <!-- モーダルウィンド -->
   <section id="modal-back">
     <div id="modal">
       <h1>モーダル</h1>
@@ -24,12 +26,22 @@
     </div>
   </section>
   <div id="modal-open">モーダル</div>
+  <!-- ストップウォッチ -->
   <section id="stop-watch">
-    <div id="timer">00:00:000</div>
-    <button id="start">start</button>
-    <button id="stop">stop</button>
-    <button id="reset">reset</button>
+    <h1>ストップウォッチ</h1>
+      <div id="timer">00:00:000</div>
+      <button id="start">start</button>
+      <button id="stop">stop</button>
+      <button id="reset">reset</button>
   </section>
+  <section id="show-users">
+    <button id="get-api">ユーザー APIを取得</button>
+    <ul id="users-ul">
+    </ul>
+  </section>
+  <div id="ob-target">
+    オブザーバーapi
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>

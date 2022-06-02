@@ -52,6 +52,49 @@ const StopWatch = () => {
     thenTime = 0
   })
 }
+const getApi = () => {
+  const getapi = document.getElementById('get-api')
+  const usersUl = document.getElementById('users-ul')
+  const showUsers = (users) => {
+    users.forEach(user => {
+      console.log(user)
+      const name = user.name
+      const username = user.username
+      const email = user.email
+      const id = user.id
+      const li = document.createElement('li')
+      li.classList.add('user-li')
+      li.textContent = `id:${id}\nname:${name}\nusername:${username}\nemail:${email}`
+      usersUl.appendChild(li)
+    })
+  }
+  getapi.addEventListener('click', () => {
+    fetch('https://jsonplaceholder.typicode.com/users').then(res=>{
+      return res.json()
+    }).then(todos => {
+      showUsers(todos)
+    })
+  })
+}
+const Observer = () => {
+  const target = document.getElementById('ob-target')
+  const callback = (entries, observer) => {
+    if(entries.isIntersecting){
+      entries.target.classList.add('anime-i')
+      // observer.unobserve(entries.target)
+      console.log('alerted')
+    }else{
+      return
+    }
+  }
+  const options = {
+    threshold: .8
+  }
+  const observer = new IntersectionObserver(callback, options)
+  observer.observe(target)
+}
 Modal()
 Hamburger()
 StopWatch()
+getApi()
+Observer()
