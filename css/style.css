@@ -1,0 +1,125 @@
+header {
+  font-weight: bold;
+  font-size: 24px;
+  height: 100px;
+  background-color: red;
+}
+.hum {
+  z-index: 20;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+}
+.hum span {
+  transition: .3s;
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background-color: #000;
+}
+.hum .n2 {
+  top: 24px;
+}
+.hum .n1 {
+  top: 12px;
+}
+.hum .n3 {
+  top: 36px;
+}
+.hum.anime-h .n2 {
+  opacity: 0;
+}
+.hum.anime-h .n1 {
+  transform: translateY(12px) rotate(45deg);
+}
+.hum.anime-h .n3 {
+  transform: translateY(-12px) rotate(-45deg);
+}
+#overlay {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bbb;
+  opacity: .8;
+  transition: .3s;
+  transform: translateX(-100%);
+}
+#overlay.anime-o {
+  transform: none;
+}
+/* modal */
+#modal-back {
+  transition: .3s;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(230, 230, 230, .8);
+  opacity: 0;
+}
+#modal-back.anime-m {
+  z-index: 30;
+  opacity: 1;
+}
+#modal {
+  position: absolute;
+  top: 175px;
+  right: 0;
+  left: 0;
+  width: 300px;
+  height: 175px;
+  background-color: rgb(199, 165, 165);
+  border-radius: 25px;
+  margin: auto auto;
+  text-align: center;
+}
+#modal.anime-m {
+  animation: modal-anime 1s;
+}
+@keyframes modal-anime {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+#modal #modal-close {
+  width: 100px;
+  height: 25px;
+  background-color: #fff;
+  color: rgb(199, 165, 165);
+  margin: 80px auto;
+  border-radius: 9999999px;
+}
+#modal #modal-close:hover {
+  opacity: .8;
+}
+#modal-open {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100px;
+  height: 25px;
+  background-color: rgb(199, 165, 165);
+  color: #fff;
+  margin: 80px auto;
+  border-radius: 9999999px;
+}
+/* stop-watch */
+#stop-watch {
+  position: relative;
+  z-index: 5;
+}
