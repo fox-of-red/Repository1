@@ -79,16 +79,24 @@ const getApi = () => {
 const Observer = () => {
   const target = document.getElementById('ob-target')
   const callback = (entries, observer) => {
-    if(entries.isIntersecting){
-      entries.target.classList.add('anime-i')
-      // observer.unobserve(entries.target)
-      console.log('alerted')
-    }else{
-      return
-    }
+    entries.forEach(entry=>{
+      console.log(entry.isIntersecting)
+      console.log(entry.target)
+      if(entry.isIntersecting){
+        entry.target.classList.add('anime-i')
+        observer.unobserve(entry.target)
+      }
+    })
+    // if(entries.isIntersecting){
+    //   entries.target.classList.add('anime-i')
+    //   observer.unobserve(entries.target)
+    //   console.log('alerted')
+    // }else{
+    //   return
+    // }
   }
   const options = {
-    threshold: .8
+    threshold: 1
   }
   const observer = new IntersectionObserver(callback, options)
   observer.observe(target)
