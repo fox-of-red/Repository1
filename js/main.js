@@ -57,7 +57,7 @@ const getApi = () => {
   const usersUl = document.getElementById('users-ul')
   const showUsers = (users) => {
     users.forEach(user => {
-      console.log(user)
+      // console.log(user)
       const name = user.name
       const username = user.username
       const email = user.email
@@ -101,8 +101,56 @@ const Observer = () => {
   const observer = new IntersectionObserver(callback, options)
   observer.observe(target)
 }
+const MultiOvsever = () => {
+  const targets = document.querySelectorAll('multi-target')
+  const callback = (entries, observer) => {
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('anime-m-o')
+        observer.unobserve(entry.target)
+      }else{
+        return
+      }
+    })
+  }
+  const ovserver = new IntersectionObserver(callback, options)
+  targets.forEach(target=>{
+    ovserver.observe(target)
+  })
+}
+const Todos = () => {
+  const todosUl = document.getElementById('todos-ul')
+  const todoButton = document.getElementById('todo-button')
+  const todoInput = document.getElementById('todo-input')
+  const removeTodo = (li) => {
+    todosUl.removeChild(li)
+  }
+  const addTodo = (todo) => {
+    if(todo===''){
+      alert('空です')
+      return
+    }else{
+      const li = document.createElement('li')
+      li.textContent = String(todo)
+      const button = document.createElement('button')
+      button.textContent = '削除'
+      button.addEventListener('click', () => {
+        removeTodo(li)
+      })
+      li.appendChild(button)
+      todosUl.appendChild(li)
+    }
+  }
+
+  todoButton.addEventListener('click', () => {
+    const todo = todoInput.value
+    addTodo(todo)
+    todoInput.value = ''
+  })
+}
 Modal()
 Hamburger()
 StopWatch()
 getApi()
 Observer()
+Todos()

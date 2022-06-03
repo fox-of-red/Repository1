@@ -161,3 +161,49 @@ header {
 #ob-target.anime-i {
   transform: rotate(1000deg);
 }
+#multi-ob-target {
+
+}
+#multi-ob-target #multi-taget {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(27, 122, 201);
+  color: #fff;
+  transform: translateY(100px);
+}
+#multi-ob-target #multi-taget:nth-child(1) {
+  transition: .3s;
+}
+#multi-ob-target #multi-taget:nth-child(2) {
+  transition: .3s .3s;
+}
+#multi-ob-target #multi-taget:nth-child(3) {
+  transition: .3s .6s;
+}
+#multi-ob-target #multi-taget:nth-child(1).anime-m-o {
+  transform: none;
+}
+#multi-ob-target #multi-taget:nth-child(2).anime-m-o {
+  transform: none;
+}
+#multi-ob-target #multi-taget:nth-child(3).anime-m-o {
+  transform: none;
+}
+#add-todo {
+  position: relative;
+  z-index: 5;
+  background-color: rgb(201, 23, 85);
+  width: 400px;
+  margin: 50px auto;
+  border-radius: 50px;
+  text-align: center;
+  padding: 10px;
+}
+#add-todo li {
+  background-color: coral;
+  border-radius: 9999px;
+  text-align: center;
+}
+#add-todo #todos-ul {
+  list-style-type: none;
+}
