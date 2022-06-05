@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/fox-of-red/Repository1/settings/pages/reactjs/static/css/main.073c9b0a.css",
-    "main.js": "/fox-of-red/Repository1/settings/pages/reactjs/static/js/main.6ae4de69.js",
-    "static/js/787.fade2e9e.chunk.js": "/fox-of-red/Repository1/settings/pages/reactjs/static/js/787.fade2e9e.chunk.js",
-    "static/media/logo.svg": "/fox-of-red/Repository1/settings/pages/reactjs/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/fox-of-red/Repository1/settings/pages/reactjs/index.html",
-    "main.073c9b0a.css.map": "/fox-of-red/Repository1/settings/pages/reactjs/static/css/main.073c9b0a.css.map",
-    "main.6ae4de69.js.map": "/fox-of-red/Repository1/settings/pages/reactjs/static/js/main.6ae4de69.js.map",
-    "787.fade2e9e.chunk.js.map": "/fox-of-red/Repository1/settings/pages/reactjs/static/js/787.fade2e9e.chunk.js.map"
+    "main.css": "/fox-of-red/Repository1/reactjs/static/css/main.073c9b0a.css",
+    "main.js": "/fox-of-red/Repository1/reactjs/static/js/main.1d54dcef.js",
+    "static/js/787.fade2e9e.chunk.js": "/fox-of-red/Repository1/reactjs/static/js/787.fade2e9e.chunk.js",
+    "static/media/logo.svg": "/fox-of-red/Repository1/reactjs/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/fox-of-red/Repository1/reactjs/index.html",
+    "main.073c9b0a.css.map": "/fox-of-red/Repository1/reactjs/static/css/main.073c9b0a.css.map",
+    "main.1d54dcef.js.map": "/fox-of-red/Repository1/reactjs/static/js/main.1d54dcef.js.map",
+    "787.fade2e9e.chunk.js.map": "/fox-of-red/Repository1/reactjs/static/js/787.fade2e9e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.6ae4de69.js"
+    "static/js/main.1d54dcef.js"
   ]
 }
