@@ -80,8 +80,8 @@ const Observer = () => {
   const target = document.getElementById('ob-target')
   const callback = (entries, observer) => {
     entries.forEach(entry=>{
-      console.log(entry.isIntersecting)
-      console.log(entry.target)
+      // console.log(entry.isIntersecting)
+      // console.log(entry.target)
       if(entry.isIntersecting){
         entry.target.classList.add('anime-i')
         observer.unobserve(entry.target)
@@ -102,7 +102,8 @@ const Observer = () => {
   observer.observe(target)
 }
 const MultiOvsever = () => {
-  const targets = document.querySelectorAll('multi-target')
+  const targets = document.querySelectorAll('#multi-target')
+  // console.log(targets)
   const callback = (entries, observer) => {
     entries.forEach(entry=>{
       if(entry.isIntersecting){
@@ -113,9 +114,9 @@ const MultiOvsever = () => {
       }
     })
   }
-  const ovserver = new IntersectionObserver(callback, options)
+  const observer = new IntersectionObserver(callback)
   targets.forEach(target=>{
-    ovserver.observe(target)
+    observer.observe(target)
   })
 }
 const Todos = () => {
@@ -154,3 +155,4 @@ StopWatch()
 getApi()
 Observer()
 Todos()
+MultiOvsever()
